@@ -97,7 +97,7 @@ class LoginRequest(BaseModel):
 class SignupRequest(BaseModel):
     email: EmailStr
     username: str = Field(..., min_length=3, max_length=50)
-    password: str = Field(..., min_length=8)
+    password: str = Field(..., min_length=8, max_length=72)
     full_name: Optional[str] = None
 
 
